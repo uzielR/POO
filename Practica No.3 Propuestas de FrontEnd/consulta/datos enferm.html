@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expediente pacientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    button {
+        padding: 10px 10px;
+    }
+        
+        /* Estilos para la cabecera */
+        header {
+            background-color: #415d67; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+    
+        nav.main-navigation {
+            background-color: #3a3939; 
+            padding: 5px;
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        /* Estilos para los botones de la barra de navegación principal */
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+            color: #fff;
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+            color: #fff;
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+            color: #fff;
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+            color:#fff;
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+            color: #fff;
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 20px;
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+        
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside ul li {
+            margin-bottom: 5px;
+        }
+        
+    
+        .profile-picture {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+     
+        .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        
+     
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #000000;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+  
+         aside {
+     background-color: #525455;
+         color: #ffffff;
+         padding: 20px;
+         width: 200px;
+         float: right;
+        }
+        
+        body {
+    margin: 0;
+    padding: 0;
+}
+.info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        {
+            
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    textarea {
+      width: 90%;
+      height: 90px;
+      padding: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Registro resultados</a></li>
+            <li><a href="#">Medidas Paciente</a></li>
+            <li><a href="#">Tratamiento y Diagnóstico</a></li>
+            <li><a href="#">Receta</a></li>
+        </ul>
+    </nav>
+    
+    <aside>
+        <div class="profile-picture">
+            <img src="ruta_de_la_imagen" alt="Foto de perfil">
+        </div>
+        
+        <h2>Información Personal</h2>
+        <ul>
+            <li>Nombre:</li>
+            <li>Apellido Paterno:</li>
+            <li>Apellido Materno:</li>
+            <li>RFC:</li>
+            <li>Número de Cédula:</li>
+            <li>Correo:</li>
+        </ul>
+    </aside>
+    <h1>Diagnóstico y Tratamiento</h1>
+  <form>
+    <label for="diagnostico">Diagnóstico:</label>
+    <textarea id="diagnostico" name="diagnostico" required></textarea>
+
+    <label for="tratamiento">Tratamiento:</label>
+    <textarea id="tratamiento" name="tratamiento" required></textarea>
+
+    <input type="submit" value="Guardar">
+  </form>
+</body>
+</html>

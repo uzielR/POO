@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Pacientes 2</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        header {
+            background-color: #415d67; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        
+        nav.main-navigation {
+            background-color: #3a3939; 
+            padding: 10px;
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+    
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+            
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+        }
+        
+     
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 25px
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #ffffff;
+        }
+        
+        
+   
+        .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid rgb(255, 255, 255);
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #65d2e5;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #65d2e5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Estilos para el formulario de edición */
+        .edit-form {
+            margin-top: 20px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        .edit-form input[type="text"],
+        .edit-form input[type="date"],
+        .edit-form input[type="tel"],
+        .edit-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .edit-form button {
+            background-color: #65d2e5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .edit-form button:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Registro de pacientes</a></li>
+            <li><a href="#">Filtro pacientes</a></li>
+            <li><a href="#">Editar pacientes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="info-section">
+        <h2>Información de los Pacientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Teléfono</th>
+                    <th>Tipo de Sangre</th>
+                    <th>Altura</th>
+                    <th>Peso</th>
+                    <th>Historial Médico</th>
+                    <th>Fecha</th>
+                    <th>Enfermedades Crónicas</th>
+                    <th>Médico que Atendió</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Gómez</td>
+                    <td>1985-07-15</td>
+                    <td>5551234567</td>
+                    <td>O+</td>
+                    <td>170 cm</td>
+                    <td>70 kg</td>
+                    <td>Diabetes, Hipertensión</td>
+                    <td>2010-05-12</td>
+                    <td>Ninguna</td>
+                    <td>Dr. López</td>
+                    <td><button onclick="editPatient(1)">Editar</button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="edit-form" id="editForm">
+        <h2>Editar Paciente</h2>
+        <form>
+            <label for="editName">Nombre:</label>
+            <input type="text" id="editName" name="name" required>
+            
+            <label for="editLastName">Apellido Paterno:</label>
+            <input type="text" id="editLastName" name="lastName" required>
+            
+            <label for="editMotherLastName">Apellido Materno:</label>
+            <input type="text" id="editMotherLastName" name="motherLastName" required>
+            
+            <label for="editBirthdate">Fecha de Nacimiento:</label>
+            <input type="date" id="editBirthdate" name="birthdate" required>
+            
+            <label for="editPhone">Teléfono:</label>
+            <input type="tel" id="editPhone" name="phone" required>
+            
+            <label for="editBloodType">Tipo de Sangre:</label>
+            <input type="text" id="editBloodType" name="bloodType" required>
+            
+            <label for="editHeight">Altura:</label>
+            <input type="text" id="editHeight" name="height" required>
+            
+            <label for="editWeight">Peso:</label>
+            <input type="text" id="editWeight" name="weight" required>
+            
+            <label for="editMedicalHistory">Historial Médico:</label>
+            <textarea id="editMedicalHistory" name="medicalHistory" required></textarea>
+            
+            <label for="editLastVisit">Fecha de la última visita:</label>
+            <input type="date" id="editLastVisit" name="lastVisit" required>
+            
+            <label for="editChronicDiseases">Enfermedades Crónicas:</label>
+            <input type="text" id="editChronicDiseases" name="chronicDiseases" required>
+            
+            <label for="editAttendingDoctor">Médico que Atendió:</label>
+            <input type="text" id="editAttendingDoctor" name="attendingDoctor" required>
+            
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+    
+    <script>
+        function editPatient(patientId) {
+            // Obtener los datos del paciente para mostrarlos en el formulario de edición
+            var name = document.getElementsByTagName('table')[0].rows[patientId].cells[0].innerText;
+            var lastName = document.getElementsByTagName('table')[0].rows[patientId].cells[1].innerText;
+            var motherLastName = document.getElementsByTagName('table')[0].rows[patientId].cells[2].innerText;
+            var birthdate = document.getElementsByTagName('table')[0].rows[patientId].cells[3].innerText;
+            var phone = document.getElementsByTagName('table')[0].rows[patientId].cells[4].innerText;
+            var bloodType = document.getElementsByTagName('table')[0].rows[patientId].cells[5].innerText;
+            var height = document.getElementsByTagName('table')[0].rows[patientId].cells[6].innerText;
+            var weight = document.getElementsByTagName('table')[0].rows[patientId].cells[7].innerText;
+            var medicalHistory = document.getElementsByTagName('table')[0].rows[patientId].cells[8].innerText;
+            var lastVisit = document.getElementsByTagName('table')[0].rows[patientId].cells[9].innerText;
+            var chronicDiseases = document.getElementsByTagName('table')[0].rows[patientId].cells[10].innerText;
+            var attendingDoctor = document.getElementsByTagName('table')[0].rows[patientId].cells[11].innerText;
+            
+            // Rellenar el formulario de edición con los datos del paciente
+            document.getElementById('editName').value = name;
+            document.getElementById('editLastName').value = lastName;
+            document.getElementById('editMotherLastName').value = motherLastName;
+            document.getElementById('editBirthdate').value = birthdate;
+            document.getElementById('editPhone').value = phone;
+            document.getElementById('editBloodType').value = bloodType;
+            document.getElementById('editHeight').value = height;
+            document.getElementById('editWeight').value = weight;
+            document.getElementById('editMedicalHistory').value = medicalHistory;
+            document.getElementById('editLastVisit').value = lastVisit;
+            document.getElementById('editChronicDiseases').value = chronicDiseases;
+            document.getElementById('editAttendingDoctor').value = attendingDoctor;
+            
+            // Mostrar el formulario de edición
+            document.getElementById('editForm').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

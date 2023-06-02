@@ -86,12 +86,6 @@
         }
         
      
-        aside {
-            background-color: #ffffcc; 
-            padding: 20px;
-            width: 200px;
-            float: left;
-        }
         
         aside ul {
             list-style-type: none;
@@ -102,7 +96,7 @@
             margin-bottom: 5px;
         }
         
-        /* Estilos para el espacio de la foto */
+
         .profile-picture {
             margin-top: 60px;
             text-align: center;
@@ -116,8 +110,10 @@
         
         
         .info-section {
-            padding: 20px;
-        }
+  padding: 20px;
+  float: right;
+}
+
         
         .info-section p {
             margin-bottom: 20px;
@@ -159,40 +155,31 @@
       text-align: left;
     }
 
+    th {
+      background-color: #65d2e5;
+    }
+
     button {
       padding: 5px 10px;
       margin-right: 5px;
     }
-    /* Estilos generales */
+
     body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 20;
+            padding: 20;
         }
         
-        /* Resto de estilos... */
-        
-        /* Estilos para la barra de información lateral */
-        aside {
-            background-color: #484848; 
-            color: #fff;
-            padding: 20px;
-            width: 200px;
-            float: left; /* Alinea el aside a la derecha */
-        }
-        
-        /* Estilos para la sección de información de prueba */
-        .info-section {
-            padding: 20px;
-            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
-        }
+  
+
         
     </style>
 </head>
+
 <body>
-    <header   text-align: center>
-        <h1>Consultorio Médico</h1>
-    </header >
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
     
     <nav class="main-navigation">
         <ul>
@@ -206,98 +193,49 @@
     
     <nav class="secondary-navigation">
         <ul>
-            <li><a href="#">Medicos registrados</a></li>
-            <li><a href="#">Editar Medicos</a></li>
-            <li><a href="#">Datos Medico</a></li>
+            <li><a href="#">Registro de pacientes</a></li>
+            <li><a href="#">Filtro pacientes</a></li>
+            <li><a href="#">Editar pacientes</a></li>
         </ul>
     </nav>
     
-    <aside>
-        <div class="profile-picture">
-            <img src="ruta_de_la_imagen" alt="Foto de perfil">
-        </div>
-        
-        <h2>Información Personal</h2>
-        <ul>
-            <li>Nombre:</li>
-            <li>Apellido Paterno:</li>
-            <li>Apellido Materno:</li>
-            <li>RFC:</li>
-            <li>Número de Cédula:</li>
-            <li>Correo:</li>
-        </ul>
-    </aside>
-    <section>
-    <div  class="info-section">
-
-        <h1>Administración de Medicos</h1>
-
-  <h2 style="text-align: right;">Insertar Medicos</h2>
-  <form style="text-align: right;">
-    <label for="nombre">Nombre:</label> 
-    <input type="text" id="nombre" name="nombre">
-   
-
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido">
-
-    <label text-align: left for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo">
-      *
-      
-    <button type="submit">Insertar</button>
-    
-  </form>
-
-          
-
-    <h2>Eliminar Medicos</h2>
-    <form>
-
-      <label for="idEliminar">ID del Paciente:</label>
-      <input type="text" id="idEliminar" name="idEliminar">
+    <h1>Registo de Pacientes</h1>
   
-      <button type="submit">Eliminar</button>
-    </form>
-  
-
-  <h2>Leer Medicos</h2>
   <table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Correo</th>
-      <th>Acciones</th>
-    </tr>
-      <td>1</td>
-      <td>Uziel</td>
-      <td>Rodri</td>
-      <td>uz@hot.com</td>
-      <td>
-        <button>Editar</button>
-        <button>Eliminar</button>
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Nacionalidad</th>
+        <th>Sexo</th>
+        <th>CURP</th>
+        <th>Correo</th>
+        <th>Tipo de Sangre</th>
+        <th>Teléfono Celular</th>
+        <th>Dirección</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Juan</td>
+        <td>Pérez</td>
+        <td>Gómez</td>
+        <td>1985-07-15</td>
+        <td>Mexicana</td>
+        <td>Masculino</td>
+        <td>PERJ850715XXX</td>
+        <td>juan.perez@example.com</td>
+        <td>O+</td>
+        <td>5551234567</td>
+        <td>Calle 123
+        Colonia Centro, CP.12345, Estado de México, Naucalpan, Estado de México, Dr. López</td>
+    </tbody>
   </table>
-
-  <h2>Editar Medicos</h2>
-  <form>
-    <label for="idEditar">ID del Paciente:</label>
-    <input type="text" id="idEditar" name="idEditar">
-
-    <label for="nombreEditar">Nombre:</label>
-    <input type="text" id="nombreEditar" name="nombreEditar">
-
-    <label for="apellidoEditar">Apellido:</label>
-    <input type="text" id="apellidoEditar" name="apellidoEditar">
-
-    <label for="correoEditar">Correo:</label>
-    <input type="email" id="correoEditar" name="correoEditar">
-
-    <button type="submit">Guardar Cambios</button>
-  </form>
- </div>
-    </section>
+  
 </body>
 </html>

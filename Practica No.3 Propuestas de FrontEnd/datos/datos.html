@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admistracion medicos 2</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        
+   
+        header {
+            background-color: #3b7b7c; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+      
+        nav.main-navigation {
+            background-color: #3a3939; 
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+        
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 25px;
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+     
+        aside {
+            background-color: #ffffcc; 
+            padding: 20px;
+            width: 200px;
+            float: right;
+            
+        }
+        
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside ul li {
+            margin-bottom: 5px;
+        }
+        
+
+        .profile-picture {
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        
+        .info-section {
+  padding: 20px;
+  float: right;
+}
+
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+      width: 50%;
+      padding: 5px;
+      margin-bottom: 16px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20;
+            padding: 20;
+        }
+        
+  
+        aside {
+         background-color: #484848;
+         color: #fff;
+         padding: 20px;
+         width: 200px;
+         margin-right: 20px;
+}
+           
+        
+
+
+       .info-section {
+        padding: 20px;
+        flex-grow: 122;
+        }
+        
+
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; 
+            margin-left: 220px;
+        }
+        
+    </style>
+</head>
+
+
+
+
+<header>
+<h1>Sistema de la salud</h1>
+</header>
+
+<nav class="main-navigation">
+<ul>
+    <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+    <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+    <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+    <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+    <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+</ul>
+</nav>
+
+<nav class="secondary-navigation">
+<ul>
+    <li><a href="#">Medicos registrados</a></li>
+    <li><a href="#">Editar Medicos</a></li>
+    <li><a href="#">Datos Medico</a></li>
+</ul>
+</nav>
+
+<aside>
+<div class="profile-picture">
+    <img src="ruta_de_la_imagen" alt="Foto de perfil">
+</div>
+
+<h2>Información Medico</h2>
+<ul>
+    <li>Nombre:</li>
+    <li>Apellido Paterno:</li>
+    <li>Apellido Materno:</li>
+    <li>RFC:</li>
+    <li>Número de Cédula:</li>
+    <li>Correo:</li>
+</ul>
+</aside>
+
+<h1>Datos Personales</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" >
+
+        <label for="apellidoPaterno">Apellido Paterno:</label>
+        <input type="text" id="apellidoPaterno" name="apellidoPaterno" >
+
+        <label for="apellidoMaterno">Apellido Materno:</label>
+        <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" >
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" id="nacionalidad" name="nacionalidad" >
+
+        <label for="estadoCivil">Estado Civil:</label>
+        <select id="estadoCivil" name="estadoCivil">
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viudo">Viudo</option>
+        </select>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+
+        <label for="rfc">RFC:</label>
+        <input type="text" id="rfc" name="rfc" >
+
+        <label for="curp">CURP:</label>
+        <input type="text" id="curp" name="curp" >
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" >
+
+        <label for="tipoSangre">Tipo de Sangre:</label>
+        <input type="text" id="tipoSangre" name="tipoSangre" >
+
+        <label for="telefonoCelular">Teléfono Celular:</label>
+        <input type="text" id="telefonoCelular" name="telefonoCelular" >
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" >
+
+        <label for="colonia">Colonia:</label>
+        <input type="text" id="colonia" name="colonia">
+
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal">
+
+        <label for="entidadFederativa">Entidad Federativa:</label>
+        <input type="text" id="entidadFederativa" name="entidadFederativa" >
+
+        <label for="municipio">Municipio:</label>
+        <input type="text" id="municipio" name="municipio" >
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" >
+
+        <button type="submit">Actualizar</button>
+    </form>
+</body>
+</html>

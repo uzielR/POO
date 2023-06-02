@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Pacientes 2</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        header {
+            background-color: #415d67; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        
+        nav.main-navigation {
+            background-color: #3a3939; 
+            padding: 10px;
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+    
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+            
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+        }
+        
+     
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 25px
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #ffffff;
+        }
+        
+        
+   
+        .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid rgb(255, 255, 255);
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #65d2e5;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consultorio Médico</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Registro de pacientes</a></li>
+            <li><a href="#">Filtro pacientes</a></li>
+            <li><a href="#">Editar pacientes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="info-section">
+        <h1>Filtrado de Pacientes</h1>
+        <form id="filter-form">
+            <label for="name-input">Nombre:</label>
+            <input type="text" id="name-input" name="name">
+            
+            <label for="surname-input">Apellido:</label>
+            <input type="text" id="surname-input" name="surname">
+            
+            <label for="date-input">Fecha de Nacimiento:</label>
+            <input type="date" id="date-input" name="date">
+            
+            <input type="submit" value="Filtrar">
+        </form>
+    </div>
+    
+    <table id="patients-table">
+        <thead>
+            <tr>
+                <tr>
+                    <th>N°</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Nacionalidad</th>
+                    <th>Sexo</th>
+                    <th>CURP</th>
+                    <th>Correo</th>
+                    <th>Tipo de Sangre</th>
+                    <th>Teléfono Celular</th>
+                    <th>Dirección</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Gómez</td>
+                    <td>1985-07-15</td>
+                    <td>Mexicana</td>
+                    <td>Masculino</td>
+                    <td>PERJ850715XXX</td>
+                    <td>juan.perez@example.com</td>
+                    <td>O+</td>
+                    <td>5551234567</td>
+                    <td>Calle 123
+                    Colonia Centro, CP.12345, Estado de México, Naucalpan, Estado de México, Dr. López</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

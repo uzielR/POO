@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administracion medicos</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        aside {
+            background-color: #3c3c3c; 
+            padding: 20px;
+            width: 200px;
+            float: right;
+            color:#fff;
+        }
+        
+        .info-section {
+            padding: 20px;
+            margin-right: 220px;
+        }
+        
+        /* Resto de estilos */
+        header {
+            background-color: #3b7b7c; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav.main-navigation {
+            background-color: #3a3939; 
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+        
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 25px;
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Lista de citas</a></li>
+            <li><a href="#">Búsqueda de citas</a></li>
+            <li><a href="#">Detalles citas</a></li>
+            <li><a href="#">Reimprimir receta</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <aside>
+            <div class="profile-picture">
+                <img src="ruta_de_la_imagen" alt="Foto de perfil">
+            </div>
+            
+            <h2>Información Personal</h2>
+            <ul>
+                <li>Nombre:</li>
+                <li>Apellido Paterno:</li>
+                <li>Apellido Materno:</li>
+                <li>RFC:</li>
+                <li>Número de Cédula:</li>
+                <li>Correo:</li>
+            </ul>
+        </aside>
+        
+        <div class="info-section">
+            <h1>Reimprimir recetas</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Fecha de Cita</th>
+                        <th>Médico</th>
+                        <th>Reimprimir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>2023-06-15</td>
+                        <td>Dr. López</td>
+                        <td><button class="reprint-button" onclick="reimprimirReceta(1)">Reimprimir Receta</button></td>
+                    </tr>
+                    <tr>
+                        <td>María González</td>
+                        <td>2023-06-20</td>
+                        <td>Dr. Sánchez</td>
+                        <td><button class="reprint-button" onclick="reimprimirReceta(2)">Reimprimir Receta</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Ramírez</td>
+                        <td>2023-06-25</td>
+                        <td>Dr. García</td>
+                        <td><button class="reprint-button" onclick="reimprimirReceta(3)">Reimprimir Receta</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ana López</td>
+                        <td>2023-07-01</td>
+                        <td>Dr. Martínez</td>
+                        <td><button class="reprint-button" onclick="reimprimirReceta(4)">Reimprimir Receta</button></td>
+                    </tr>
+                    <tr>
+                        <td>Pablo Torres</td>
+                        <td>2023-07-05</td>
+                        <td>Dr. Rodríguez</td>
+                        <td><button class="reprint-button" onclick="reimprimirReceta(5)">Reimprimir Receta</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function reimprimirReceta(citaId) {
+            alert("Reimprimiendo receta médica para la cita " + citaId);
+        }
+    </script>
+</body>
+</html>
+

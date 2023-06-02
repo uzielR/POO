@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admistracion medicos 2</title>
+    <title>Admistracion medicos</title>
     
     <style>
-        /* Estilos generales */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -170,29 +170,29 @@
             padding: 0;
         }
         
-        /* Resto de estilos... */
-        
-        /* Estilos para la barra de información lateral */
+       
         aside {
             background-color: #484848; 
             color: #fff;
             padding: 20px;
             width: 200px;
-            float: left; /* Alinea el aside a la derecha */
+            float: right; 
         }
         
-        /* Estilos para la sección de información de prueba */
+        
         .info-section {
             padding: 20px;
-            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+            margin-right: 220px; 
         }
         
     </style>
+
+
 </head>
 <body>
-    <header   text-align: center>
-        <h1>Consultorio Médico</h1>
-    </header >
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
     
     <nav class="main-navigation">
         <ul>
@@ -206,9 +206,10 @@
     
     <nav class="secondary-navigation">
         <ul>
-            <li><a href="#">Medicos registrados</a></li>
-            <li><a href="#">Editar Medicos</a></li>
-            <li><a href="#">Datos Medico</a></li>
+            <li><a href="#">Lista de citas</a></li>
+            <li><a href="#">Búsqueda de citas</a></li>
+            <li><a href="#">Detalles citas</a></li>
+            <li><a href="#">Reimprimir receta</a></li>
         </ul>
     </nav>
     
@@ -227,77 +228,42 @@
             <li>Correo:</li>
         </ul>
     </aside>
-    <section>
-    <div  class="info-section">
-
-        <h1>Administración de Medicos</h1>
-
-  <h2 style="text-align: right;">Insertar Medicos</h2>
-  <form style="text-align: right;">
-    <label for="nombre">Nombre:</label> 
-    <input type="text" id="nombre" name="nombre">
-   
-
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido">
-
-    <label text-align: left for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo">
-      *
-      
-    <button type="submit">Insertar</button>
     
-  </form>
-
-          
-
-    <h2>Eliminar Medicos</h2>
+   <h1 style= >Búsqueda de Citas</h1>
     <form>
-
-      <label for="idEliminar">ID del Paciente:</label>
-      <input type="text" id="idEliminar" name="idEliminar">
-  
-      <button type="submit">Eliminar</button>
+        <p >nombre del paciente</p>
+        <input style="text-align:center" type="text" id="nombre" name="nombre">
+        
+        <label for="fecha">Fecha de Cita:</label>
+        <input type="date" id="fecha" name="fecha">
+        
+        <input type="submit" value="Buscar">
     </form>
-  
-
-  <h2>Leer Medicos</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Correo</th>
-      <th>Acciones</th>
-    </tr>
-      <td>1</td>
-      <td>Uziel</td>
-      <td>Rodri</td>
-      <td>uz@hot.com</td>
-      <td>
-        <button>Editar</button>
-        <button>Eliminar</button>
-      </td>
-    </tr>
-  </table>
-
-  <h2>Editar Medicos</h2>
-  <form>
-    <label for="idEditar">ID del Paciente:</label>
-    <input type="text" id="idEditar" name="idEditar">
-
-    <label for="nombreEditar">Nombre:</label>
-    <input type="text" id="nombreEditar" name="nombreEditar">
-
-    <label for="apellidoEditar">Apellido:</label>
-    <input type="text" id="apellidoEditar" name="apellidoEditar">
-
-    <label for="correoEditar">Correo:</label>
-    <input type="email" id="correoEditar" name="correoEditar">
-
-    <button type="submit">Guardar Cambios</button>
-  </form>
- </div>
-    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Fecha de Cita</th>
+                <th>Médico que Atendió</th>
+                <th>Tipo de Cita</th>
+                <th>Teléfono Celular</th>
+                <th>Estado de Cita</th>
+                <th>Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Poloo</td>
+                <td>2039-12-12</td>
+                <td>uz</td>
+                <td>Consulta General</td>
+                <td>5551234567</td>
+                <td>autorizado</td>
+                <td>NA</td>
+            </tr>
+            
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

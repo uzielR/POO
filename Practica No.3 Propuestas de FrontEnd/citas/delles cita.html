@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admistracion medicos</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        aside {
+            background-color: #484848; 
+            color: #ffffff;
+            padding: 20px;
+            width: 200px;
+            float: right; 
+        }
+        
+        .info-section {
+            padding: 17px;
+            margin-right: 222px; 
+        }
+        
+        
+        header {
+            background-color: #3b7b7c; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav.main-navigation {
+            background-color: #3a3939; 
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #65d2e5; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #65d2e5; 
+        
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #65d2e5; 
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #316967; 
+            padding: 25px;
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de la salud</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Lista de citas</a></li>
+            <li><a href="#">Búsqueda de citas</a></li>
+            <li><a href="#">Detalles citas</a></li>
+            <li><a href="#">Reimprimir receta</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <aside>
+            <div class="profile-picture">
+                <img src="ruta_de_la_imagen" alt="Foto de perfil">
+            </div>
+        
+            <h2>Información Personal</h2>
+            <ul>
+                <li>Nombre:</li>
+                <li>Apellido Paterno:</li>
+                <li>Apellido Materno:</li>
+                <li>RFC:</li>
+                <li>Número de Cédula:</li>
+                <li>Correo:</li>
+            </ul>
+        </aside>
+        
+        <div class="info-section">
+            <h1>Detalles de la Cita</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Paciente:</th>
+                        <td>UZIEL</td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de Cita:</th>
+                        <td>2000-01-01</td>
+                    </tr>
+                    <tr>
+                        <th>Médico que Atendió:</th>
+                        <td>Dr.esteban</td>
+                    </tr>
+                    <tr>
+                        <th>Tipo de Cita:</th>
+                        <td>Consulta l</td>
+                    </tr>
+                    <tr>
+                        <th>Teléfono Celular:</th>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <th>Estado de Cita:</th>
+                        <td>Confirmada</td>
+                    </tr>
+                    <tr>
+                        <th>Observaciones:</th>
+                        <td>Ninguna</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
