@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 
 #inicializacion del APP
@@ -9,14 +9,22 @@ app.config['MYSQL_PASSWORD']=''
 app.config['MYSQL_DB']='bdflask'
 mysql = MySQL(app)
 
+#declaracion de las rutas
+
 #declaracion de la ruta al local host
 @app.route('/')
 def index():
-    return "hola mundo Flask"
+    return render_template('index.html')
 
-@app.route('/GUARDAR')
-def GUARDAR():
-    return "se guardo en la BD"
+@app.route('/guardar',methods=['POST'])
+def guardar():
+    if request.method == 'POST': 
+        titulo=request.form['txtTitulo']
+        artista=request.form['txtArtista']
+        anio=request.form['txtAnio']
+        print(titulo, artista, anio)
+
+    return 'los datos llegaron'
 
 @app.route('/eliminar')
 def eliminar():
