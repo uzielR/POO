@@ -30,9 +30,35 @@
 
 
 </form>    
+<br>
+<br>
+
+<h1>Album Guardar </h1>
+ 
+ <thead>
+   <tr>
+    <td>id: </td>
+    <td>Album: </td>
+    <td>artista: </td>
+    <td>año de publicacion: </td>
+   </tr>
+ </thead>
+ 
+   <tbody>
+    {% for alb in Listalbum %}
+     <tr>
+      <td>{{alb.0}} </td>
+      <td>{{alb.1}} </td>
+      <td>{{alb.2}} </td>
+      <td>{{alb.3}} </td>
+      <td>
+        <a href="#"> editar </a>
+        <a href="#"> borrar </a>
+      </td>
+     </tr>
+    {%endfor%}
+   </tbody>
+
 </body>
-
-
-
 
 </html>

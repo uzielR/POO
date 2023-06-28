@@ -15,7 +15,11 @@ mysql = MySQL(app)
 #declaracion de la ruta al local host
 @app.route('/')
 def index():
-    return render_template('index.html')
+    CC= mysql.connection.cursor()
+    CC.execute('SELECT * FROM album')
+    conAlbum = CC.fetchall() 
+    print (conAlbum)
+    return render_template('index.html', Listalbum=conAlbum)
 
 @app.route('/guardar',methods=['POST'])
 def guardar():
@@ -27,7 +31,9 @@ def guardar():
 
         #conectar a la bd
         CS = mysql.connection.cursor()
-        CS.execute ('insert into albums(titulo, artista, anio) values(%s,%s,%s)',(Vtitulo,Vartista,Vanio))
+        
+        CS.execute('INSERT INTO albums (titulo, artista, anio) VALUES (%s, %s, %s)', (titulo, artista, anio))
+
         mysql.connection.commit()
     
     flash('el album fue agregado correctamente')
