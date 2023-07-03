@@ -42,6 +42,14 @@ def guardar():
 def eliminar():
     return "se elimino en la BD"
   
+@app.route('/editar/<string:id>')
+def editar(id):
+    cursorID=mysql.connection.cursor()
+    cursorID.execute('select * from album where id = %s',(id))
+    cunsultaID= cursorID.fetchone()
+
+    return render_template('editarAlbum.html',album=cunsultaID)
+
 #ejecucion del servidor en el puerto 5000
 if __name__ == '__main__':
   app.run(port=5000,debug=True)
