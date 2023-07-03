@@ -31,8 +31,7 @@ def guardar():
 
         #conectar a la bd
         CS = mysql.connection.cursor()
-        
-        CS.execute('INSERT INTO albums (titulo, artista, anio) VALUES (%s, %s, %s)', (titulo, artista, anio))
+        CS.execute('INSERT INTO album (titulo, artista, anio) VALUES (%s, %s, %s)', (titulo, artista, anio))
 
         mysql.connection.commit()
     
